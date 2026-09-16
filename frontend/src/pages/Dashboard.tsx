@@ -9,7 +9,6 @@ import {
   ArrowRight,
   TrendingUp,
   Sparkles,
-  ShieldCheck,
   CheckCircle2,
   Calendar,
   Layers,

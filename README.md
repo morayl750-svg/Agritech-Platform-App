@@ -138,6 +138,8 @@ Before starting the platform, execute the SQL scripts in your Supabase SQL Edito
 npm install
 ```
 
+> **Windows PowerShell:** If PowerShell blocks `npm.ps1` with an execution-policy error, use `npm.cmd` instead, for example `npm.cmd install`, `npm.cmd run dev:backend`, and `npm.cmd run dev:frontend`.
+
 ### Start Development Servers
 
 Run the backend Express API server (runs on `http://localhost:5000`):
@@ -167,5 +169,6 @@ This repository strictly complies with the **Tumaal Skills Library Master Rulebo
 ## 📄 License
 
 Developed for the **AgriSmart Enterprise Initiative** for Somali agricultural development.
-#   A g r i s m a r t  
+#   A g r i s m a r t 
+ 
  

@@ -61,7 +61,7 @@ export function RemindersPopover() {
   }
 
   const handleAdd = (rem: Omit<FarmerReminder, 'id' | 'created_at' | 'isDone'>) => {
-    const newRem = addReminder(rem)
+    addReminder(rem)
     setReminders(getReminders())
   }
 

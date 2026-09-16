@@ -8,7 +8,6 @@ import {
   FlaskConical,
   CheckCircle2,
   Plus,
-  ShieldAlert,
 } from 'lucide-react'
 import type { FarmerReminder, ReminderCategory } from '@/types/reminders'
 import {

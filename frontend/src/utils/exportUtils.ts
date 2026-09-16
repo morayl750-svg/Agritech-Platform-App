@@ -1,5 +1,6 @@
 import type { TransactionRecord } from '@/types/ledger'
 import type { MarketplaceOrder } from '@/types'
+import type { LedgerTotals } from '@/types/ledger'
 
 /** Export data to CSV / Excel file */
 export function exportToCSV(filename: string, headers: string[], rows: (string | number)[][]) {
@@ -58,7 +59,7 @@ export function exportOrdersToCSV(orders: MarketplaceOrder[]) {
 
 /** Print & Save Financial Statement to PDF */
 export function printFinancialStatement(
-  totals: { income: number; expense: number; net: number },
+  totals: LedgerTotals,
   transactions: TransactionRecord[]
 ) {
   const printWindow = window.open('', '_blank')
@@ -125,15 +126,15 @@ export function printFinancialStatement(
         <div class="summary-grid">
           <div class="card">
             <div class="card-title">DAKHLIGA JUMLADA (TOTAL INCOME)</div>
-            <div class="card-val" style="color: #059669;">+$${totals.income.toFixed(2)}</div>
+            <div class="card-val" style="color: #059669;">+$${totals.totalIncome.toFixed(2)}</div>
           </div>
           <div class="card">
             <div class="card-title">KHARASHKA BEERTA (TOTAL EXPENSE)</div>
-            <div class="card-val" style="color: #dc2626;">-$${totals.expense.toFixed(2)}</div>
+            <div class="card-val" style="color: #dc2626;">-$${totals.totalExpense.toFixed(2)}</div>
           </div>
           <div class="card">
             <div class="card-title">FAA'IIDADA NADIFKA AH (NET BALANCE)</div>
-            <div class="card-val" style="color: #111827;">$${totals.net.toFixed(2)}</div>
+            <div class="card-val" style="color: #111827;">$${totals.totalBalance.toFixed(2)}</div>
           </div>
         </div>
 
